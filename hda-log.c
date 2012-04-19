@@ -59,6 +59,7 @@ static void reset_color(void)
 	if (!(log_flags & HDA_LOG_FLAG_COLOR))
 		return;
 	printf("\x1b[0m");
+	fflush(stdout);
 }
 
 static void _hda_log(int level, const char *fmt, va_list ap)
